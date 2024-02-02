@@ -1,0 +1,101 @@
+@import "animation.scss";
+@import "navbar.scss";
+@import "hero.scss";
+@import "chefs.scss";
+@import "recipe.scss";
+@import "footer.scss";
+
+.light-theme {
+  --background-color: #fff;
+  --background-light: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --primary-color: rgba(255, 0, 86);
+  --text-color: #0a0a0a;
+  --text-light: #575757;
+  --font-size: 16px;
+  --animation-speed: 1;
+}
+.dark-theme{
+  --background-color: #000000;
+  --background-light: #2b2b2b;
+  --shadow-color: rgba(157, 157, 157, 0.2);
+  --primary-color: rgba(255, 0, 86);
+  --text-color: #ffffff;
+  --text-light: #777777;
+  --font-size: 16px;
+  --animation-speed: 1;
+}
+@function getAnimationDuration($duration: number) {
+  @return calc($duration * var(--animation-speed));
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: var(--font-size);
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+}
+a {
+  text-decoration: none;
+}
+.loading-bar{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.error{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.not-found{
+  height: 50vh;
+  padding-top: 60px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.modal{
+  background-color:var(--background-color);
+  font-size: 18px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center ;
+  margin: 5em auto;
+  align-items: center;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px var(--shadow-color);
+  color: var(--text-light);
+  .header{
+    display: flex;
+    justify-content: center;
+    gap: 12em;
+    padding-block: 1em;
+    .topic{
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+    .close{
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(169, 200, 253);
+      cursor: pointer;
+    }
+  }
+
+}

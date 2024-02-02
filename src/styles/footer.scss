@@ -1,0 +1,33 @@
+.footer-section {
+    max-width: 1550px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1em;
+    background-color: black;
+    color: white;
+    padding-inline: 17vh;
+    padding-block: 3vh;
+    letter-spacing: 1px;
+    h3 {
+      margin-bottom: 15px;
+    }
+    p {
+      color: #acacac;
+    }
+    .p-coll p {
+      padding-block: 3px;
+      cursor: pointer;
+      &:hover {
+        color: rgb(90, 143, 250);
+      }
+    }
+    .copyright {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      color: rgb(204, 199, 199);
+      font-style: italic;
+    }
+  }
