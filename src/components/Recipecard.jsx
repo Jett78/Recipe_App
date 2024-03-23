@@ -1,7 +1,6 @@
 import React from "react";
 import { IoBookSharp } from "react-icons/io5";
 import { FaBowlFood } from "react-icons/fa6";
-import { ChakraProvider } from "@chakra-ui/react";
 import {
   Modal,
   ModalOverlay,

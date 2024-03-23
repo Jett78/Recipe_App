@@ -31,6 +31,7 @@
   }
   .text-content {
     width: 50%;
+    min-width: 350px;
     h1 {
       font-size: 4em;
       font-weight: 700;
@@ -48,7 +49,10 @@
   }
   .img-content {
     width: 50%;
+    max-width: 500px;
     display: grid;
+    align-items: center;
+    margin-left: 10vh;
     grid-template-columns: repeat(4,120px);
     // grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     justify-content: end;
